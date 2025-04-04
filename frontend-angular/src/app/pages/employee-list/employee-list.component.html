@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Employee List</h2>
+    <button routerLink="/add-employee" class="btn btn-success">+ Add Employee</button>
+  </div>
+  
+  <div style="margin-bottom: 20px;">
+    <input class="form-control d-inline w-auto me-2" type="text" [(ngModel)]="searchDept" placeholder="Search by Department" style="margin-right: 10px;" />
+    <input class="form-control d-inline w-auto me-2" type="text" [(ngModel)]="searchPos" placeholder="Search by Position" style="margin-right: 10px;" />
+    <button class="btn btn-primary me-2" (click)="onSearch()" style="margin-right: 5px;">Search</button>
+    <button class="btn btn-secondary" (click)="resetSearch()">Clear</button>
+  </div>
+  
+  <table class="table table-bordered table-hover mt-3" *ngIf="employees.length > 0" border="1" cellpadding="8" style="width: 100%; margin-top: 20px;">
+    <thead>
+      <tr>
+        <th>Profile Picture</th>
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>
+          <img class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;"
+    [src]="emp.profilePicture || 'https://ui-avatars.com/api/?name=Profile&background=random'"
+    alt="Profile"
+    width="60"
+    height="60"
+    style="object-fit: cover; border-radius: 50%;" />
+        </td>
+        <td>{{ emp.name }}</td>
+        <td>
+          <td>
+            <button class="btn btn-primary me-2" (click)="viewEmployee(emp.id)" >
+              View
+            </button>
+          
+            <button class="btn btn-primary me-2"  (click)="editEmployee(emp.id)" >
+              Edit
+            </button>
+          
+            <button class="btn btn-danger" (click)="deleteEmployee(emp.id)" >
+              Delete
+            </button>
+          </td>
+          
+      
+        
+  
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="!loading && employees.length === 0">
+    No employees found.
+  </div>
+  

@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <h2 class="mb-4">{{ isEditMode ? 'Edit Employee' : 'Add Employee' }}</h2>
+  
+    <div *ngIf="successMessage" class="alert alert-success text-center">
+      {{ successMessage }}
+    </div>
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" [(ngModel)]="name" name="name" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="position" class="form-label">Position</label>
+        <input type="text" id="position" class="form-control" [(ngModel)]="position" name="position" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="department" class="form-label">Department</label>
+        <input type="text" id="department" class="form-control" [(ngModel)]="department" name="department" required />
+      </div>
+  
+      <div class="col-md-6">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="number" id="salary" class="form-control" [(ngModel)]="salary" name="salary" required />
+      </div>
+  
+      <div class="col-12">
+        <label for="profile" class="form-label">Profile Picture</label>
+        <input type="file" id="profile" class="form-control" (change)="onFileChange($event)" />
+      </div>
+  
+      <div class="col-12" *ngIf="imagePreview">
+        <label class="form-label d-block">Preview:</label>
+        <img [src]="imagePreview" alt="Preview" class="rounded" width="120" height="120" style="object-fit: cover;" />
+      </div>
+  
+      <div class="col-12 mt-3">
+        <button type="submit" class="btn btn-primary" [disabled]="uploading">
+          {{ isEditMode ? 'Update Employee' : 'Add Employee' }}
+        </button>
+      </div>
+    </form>
+  </div>
+  
+  
+  

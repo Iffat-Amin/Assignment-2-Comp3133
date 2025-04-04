@@ -1,0 +1,94 @@
+{
+  "hash": "422dcf27",
+  "configHash": "f4b5e643",
+  "lockfileHash": "9261f588",
+  "browserHash": "9bcb79d6",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "47cb89a3",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "b85c6ee5",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "40d70cbf",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "ca9dd1da",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "052fc2fd",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "9c1f9a35",
+      "needsInterop": false
+    },
+    "@apollo/client/core": {
+      "src": "../../../../../../node_modules/@apollo/client/core/index.js",
+      "file": "@apollo_client_core.js",
+      "fileHash": "71a0a35d",
+      "needsInterop": false
+    },
+    "apollo-angular": {
+      "src": "../../../../../../node_modules/apollo-angular/fesm2022/ngApollo.mjs",
+      "file": "apollo-angular.js",
+      "fileHash": "1ed6db83",
+      "needsInterop": false
+    },
+    "apollo-angular/http": {
+      "src": "../../../../../../node_modules/apollo-angular/fesm2022/ngApolloLinkHttp.mjs",
+      "file": "apollo-angular_http.js",
+      "fileHash": "bae91fd0",
+      "needsInterop": false
+    },
+    "graphql-tag": {
+      "src": "../../../../../../node_modules/graphql-tag/lib/index.js",
+      "file": "graphql-tag.js",
+      "fileHash": "c5fe9649",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-ET7RSW3C": {
+      "file": "chunk-ET7RSW3C.js"
+    },
+    "chunk-W5FVERYR": {
+      "file": "chunk-W5FVERYR.js"
+    },
+    "chunk-4JV6UI2A": {
+      "file": "chunk-4JV6UI2A.js"
+    },
+    "chunk-Z2TEWN47": {
+      "file": "chunk-Z2TEWN47.js"
+    },
+    "chunk-U5ILEPFK": {
+      "file": "chunk-U5ILEPFK.js"
+    },
+    "chunk-KCS35COO": {
+      "file": "chunk-KCS35COO.js"
+    },
+    "chunk-EP3VDEZY": {
+      "file": "chunk-EP3VDEZY.js"
+    },
+    "chunk-L3TH4L7L": {
+      "file": "chunk-L3TH4L7L.js"
+    }
+  }
+}

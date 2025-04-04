@@ -1,0 +1,16 @@
+<nav style="padding: 10px 20px; background-color: #343a40; color: white; display: flex; align-items: center; justify-content: space-between;">
+  <div>
+    <strong style="font-size: 1.2rem; margin-right: 30px;">Employee Manager</strong>
+    <a routerLink="/login" routerLinkActive="active" style="margin-right: 15px; color: white; text-decoration: none;">Login</a>
+    <a routerLink="/register" routerLinkActive="active" style="margin-right: 15px; color: white; text-decoration: none;">Register</a>
+    <a routerLink="/employees" routerLinkActive="active" style="margin-right: 15px; color: white; text-decoration: none;">Employees</a>
+  </div>
+
+  <div *ngIf="isLoggedIn">
+    <button (click)="logout()" class="btn btn-sm btn-danger">Logout</button>
+  </div>
+</nav>
+
+<div class="container mt-4" style="padding: 20px;">
+  <router-outlet></router-outlet>
+</div>

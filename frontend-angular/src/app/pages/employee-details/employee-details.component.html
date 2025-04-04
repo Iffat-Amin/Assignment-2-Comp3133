@@ -1,0 +1,21 @@
+<h2>Employee Details</h2>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error" style="color: red;">Error: {{ error.message }}</div>
+
+<div *ngIf="employee && !loading" style="max-width: 400px; margin: auto; text-align: center;">
+  <img
+    *ngIf="employee.profilePicture"
+    [src]="employee.profilePicture"
+    alt="Profile Picture"
+    width="150"
+    height="150"
+    style="border-radius: 50%; object-fit: cover; margin-bottom: 15px;"
+  />
+
+  <h3>{{ employee.name }}</h3>
+  <p><strong>Position:</strong> {{ employee.position }}</p>
+  <p><strong>Department:</strong> {{ employee.department }}</p>
+  <p><strong>Salary:</strong> {{ employee.salary | currency }}</p>
+</div>
+
