@@ -12,7 +12,7 @@ import { inject } from '@angular/core';
       
       const httpLink = inject(HttpLink);
       return {
-        link: httpLink.create({ uri: 'http://localhost:5001/graphql' }),
+        link: httpLink.create({ uri: 'https://assignment-2-comp3133back.onrender.com' }),
         cache: new InMemoryCache(),
       };
     }),
