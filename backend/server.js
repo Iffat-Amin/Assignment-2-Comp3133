@@ -10,7 +10,10 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors()); // for frontend access
+app.use(cors({
+    origin: "https://assignment2frontend-puce.vercel.app/",
+    credentials: true
+})); // for frontend access
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); 
 

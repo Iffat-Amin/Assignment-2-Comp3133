@@ -38,6 +38,7 @@ const UPDATE_EMPLOYEE = gql`
   standalone: false,
   templateUrl: './employee-form.component.html',
   styleUrl: './employee-form.component.css'
+  
 })
 export class EmployeeFormComponent implements OnInit {
   name = '';
@@ -50,6 +51,8 @@ export class EmployeeFormComponent implements OnInit {
   isEditMode = false;
   employeeId: string | null = null;
   successMessage: string = '';
+  readonly backendBaseUrl = 'https://assignment-2-comp3133back.onrender.com';
+
 
   constructor(
     private route: ActivatedRoute,
@@ -97,14 +100,14 @@ export class EmployeeFormComponent implements OnInit {
     const formData = new FormData();
     formData.append('profile', this.profilePicture);
 
-    const response = await fetch('http://localhost:5001/upload', {
+    const response = await fetch('https://assignment-2-comp3133back.onrender.com/upload', {
       method: 'POST',
       body: formData,
     });
 
     if (!response.ok) throw new Error('Image upload failed');
     const result = await response.json();
-    return result.imageUrl;
+    return `${this.backendBaseUrl}/uploads/${result.imageUrl.split('/').pop()}`;
   }
 
   async onSubmit(): Promise<void> {
