@@ -4,6 +4,8 @@
 <div *ngIf="error" style="color: red;">Error: {{ error.message }}</div>
 
 <div *ngIf="employee && !loading" style="max-width: 400px; margin: auto; text-align: center;">
+ 
+
   <img
     *ngIf="employee.profilePicture"
     [src]="employee.profilePicture"
@@ -17,5 +19,6 @@
   <p><strong>Position:</strong> {{ employee.position }}</p>
   <p><strong>Department:</strong> {{ employee.department }}</p>
   <p><strong>Salary:</strong> {{ employee.salary | currency }}</p>
+ 
 </div>
 
