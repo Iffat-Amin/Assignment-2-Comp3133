@@ -51,7 +51,7 @@ export class EmployeeFormComponent implements OnInit {
   isEditMode = false;
   employeeId: string | null = null;
   successMessage: string = '';
-  readonly backendBaseUrl = 'https://assignment-2-comp3133back.onrender.com';
+  readonly backendBaseUrl = 'https://assignment-2-comp3133back.onrender.com/graphql';
 
 
   constructor(
@@ -100,7 +100,7 @@ export class EmployeeFormComponent implements OnInit {
     const formData = new FormData();
     formData.append('profile', this.profilePicture);
 
-    const response = await fetch('https://assignment-2-comp3133back.onrender.com/upload', {
+    const response = await fetch('http://localhost:5001/upload', {
       method: 'POST',
       body: formData,
     });

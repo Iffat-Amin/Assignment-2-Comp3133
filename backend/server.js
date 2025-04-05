@@ -11,9 +11,10 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: "https://assignment2frontend-puce.vercel.app/",
+    origin: "https://assignment2frontend-puce.vercel.app",
     credentials: true
-})); // for frontend access
+  }));
+   // for frontend access
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); 
 
