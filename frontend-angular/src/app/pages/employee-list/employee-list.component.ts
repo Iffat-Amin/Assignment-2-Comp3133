@@ -42,6 +42,8 @@ const SEARCH_EMPLOYEES = gql`
   styleUrl: './employee-list.component.css'
 })
 export class EmployeeListComponent implements OnInit {
+  readonly backendBaseUrl = 'https://assignment-2-comp3133back.onrender.com';
+
   employees: any[] = [];
   loading = true;
   error: any;
