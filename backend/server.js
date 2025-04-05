@@ -11,7 +11,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: "https://vercel.com/iffat-amin-nabilas-projects/assignment2frontend2/5mVn6cxhdjuiP7QvMqLXbc4152g8",
+    origin: "https://assignment2frontend2-98op957pz-iffat-amin-nabilas-projects.vercel.app",
     credentials: true
   }));
    // for frontend access
